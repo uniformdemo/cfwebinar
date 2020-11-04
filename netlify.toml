@@ -1,0 +1,19 @@
+[build]
+  command = 'npm run ci'
+  publish = 'out'
+
+[template]
+  incoming-hooks = ["Uniform"]
+
+[template.environment]
+  CONTENTFUL_SPACE_ID = 'Contentful Space ID'
+  CONTENTFUL_ENVIRONMENT = 'Contentful Environment'
+  CONTENTFUL_CDA_ACCESS_TOKEN = 'Contentful Delivery API Key'
+  CONTENTFUL_CPA_ACCESS_TOKEN = 'Contentful Preview API Key'
+  NEXT_PUBLIC_UNIFORM_INTENTS='Uniform Optimize Intent Data URL'
+  GA_UA_ID='Google Analytics ID (optional)'
+  UNIFORM_PACKAGES_TOKEN='Private npm registry token'
+
+# Stores the next cache between builds for faster build time
+[[plugins]]
+  package = "netlify-plugin-cache-nextjs"
