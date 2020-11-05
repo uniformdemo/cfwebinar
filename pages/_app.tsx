@@ -15,6 +15,7 @@ import { RegisterForm } from '../components/RegisterForm';
 import { AppProps } from 'next/dist/next-server/lib/router/router';
 import { Tracker, TrackerScoring } from '@uniformdev/optimize-tracker-common';
 import { WhyAttend } from '../components/WhyAttend';
+import { PersonalizedWhyAttend } from '../components/PersonalizedWhyAttend';
 
 const componentMapping: ComponentMapping = {
   hero: MainHero,
@@ -24,6 +25,7 @@ const componentMapping: ComponentMapping = {
   talksList: TalkList,
   registrationForm: RegisterForm,
   whyAttend: WhyAttend,
+  'PersonalizedWhyAttend': PersonalizedWhyAttend
 };
 
 export type UniformConfAppProps = AppProps & {
